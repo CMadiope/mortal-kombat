@@ -1,0 +1,95 @@
+<nav class="font-marcellus">
+  <div
+    class="flex py-1 px-4 lg:bg-[#223E6B] text-white items-center justify-between relative"
+  >
+    <div class="hidden lg:flex items-center gap-5">
+      <div>
+        <img src="/assets/wb-icon.png" alt="icon" class="w-6 h-6" />
+      </div>
+      <div
+        class="flex items-center border-x border-gray-400 px-2 text-white/90"
+      >
+        <mat-icon fontIcon="language" class="text-[20px]"></mat-icon>
+        <p class="font-sans text-[.6875rem] pt-2">United Kingdom English</p>
+      </div>
+      <div class="flex gap-2 items-center border-r border-gray-400 pr-4">
+        <img src="/assets/mk30-icon.png" alt="30" class="w-6 h-6" />
+        <p class="uppercase font-bold text-[.875em] pt-2">
+          MK 30th anniversary
+        </p>
+      </div>
+    </div>
+    <div class="hidden lg:flex gap-2 items-center">
+      <div class="border-x border-gray-400 px-2 pt-2">
+        <p class="uppercase font-bold text-[.875em] px-2">Shop Merch</p>
+      </div>
+      <div class="flex gap-2 text-[.875em] px-2 items-center">
+        <mat-icon> tiktok </mat-icon>
+        <mat-icon> discord </mat-icon>
+      </div>
+      <div class="flex items-center px-2 border-l">
+        <p class="max-lg:hidden font-sans font-bold pt-2">Sign in</p>
+      </div>
+    </div>
+    <div
+      class="lg:hidden absolute right-4 cursor-pointer top-4 text-2xl text-black bg-white p-2 rounded-full z-30"
+      (click)="shoMobileNav()"
+    >
+      <mat-icon> menu </mat-icon>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div
+    [class.mobile]="mobile"
+    class="fixed top-0 right-[-100%] z-20 w-full h-screen ease-in-out duration-300 overflow-hidden lg:hidden bg-[url(src/assets/mobile-menu-bg.jpeg)] bg-center bg-cover bg-no-repeat"
+  >
+    <div class="flex flex-col items-center pt-[100px] text-white">
+      <div class="w-[250px]">
+        <img src="/assets/mortal.png" alt="mk" />
+      </div>
+      <ul class="pt-12 flex flex-col gap-6 text-center">
+        <li>
+          <a href="#">Game info</a>
+        </li>
+        <li>
+          <a href="#">#mkkollective</a>
+        </li>
+        <li>
+          <a href="#">media</a>
+        </li>
+        <li>
+          <a href="#">faq</a>
+        </li>
+      </ul>
+      <div class="uppercase text-[.9rem] mt-12 font-marcellus order">
+        <h3 class="">Pre-order now</h3>
+      </div>
+      <p class="uppercase pt-2 text-gray-400">september 19</p>
+      <div class="flex gap-2 text-[.875em] px-2 items-center py-3">
+        <mat-icon> tiktok </mat-icon>
+        <mat-icon> discord </mat-icon>
+      </div>
+      <div class="flex gap-2 items-center">
+        <img src="/assets/mk30-icon.png" alt="30" class="w-6 h-6" />
+        <p class="uppercase font-bold text-[.875em] pt-2">
+          MK 30th anniversary
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex justify-between items-center text-white bg-[#223E6B] fixed bottom-0 w-full px-4 py-2"
+    >
+      <div class="flex items-center">
+        <div>
+          <img src="/assets/wb-icon.png" alt="icon" class="w-6 h-6" />
+        </div>
+        <div class="flex items-center px-2 text-white/90">
+          <mat-icon fontIcon="language" class="text-[20px]"></mat-icon>
+          <p class="font-sans  pt-2">English</p>
+        </div>
+      </div>
+      <div><p class="font-sans font-bold">Sign in</p></div>
+    </div>
+  </div>
+</nav>
